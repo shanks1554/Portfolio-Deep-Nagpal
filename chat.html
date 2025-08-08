@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Deep Nagpal's AI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .chat-container {
+            max-width: 1000px;
+            margin: 100px auto 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .chat-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .chat-header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.8rem;
+        }
+        
+        .chat-header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        .chat-iframe-container {
+            background: #f8fafc;
+            border-radius: 0;
+            overflow: hidden;
+            min-height: 600px;
+        }
+        
+        .chat-iframe-container iframe {
+            border: none;
+            width: 100%;
+            height: 600px;
+        }
+        
+        .chat-footer {
+            padding: 1.5rem;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+        }
+        
+        .chat-footer p {
+            color: #6b7280;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        .chat-footer i {
+            color: #2563eb;
+            margin-right: 0.5rem;
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: #1f2937;
+            text-decoration: none;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .back-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+    
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1><i class="fas fa-robot"></i> Chat with Deep Nagpal</h1>
+            <p>Connect with my AI assistant to discuss projects, opportunities, and collaborations</p>
+        </div>
+        
+        <div class="chat-iframe-container">
+            <iframe 
+                src="https://deep1554-careerconversations.hf.space/" 
+                width="100%" 
+                height="600px" 
+                frameborder="0"
+                title="Deep Nagpal's AI Career Assistant">
+            </iframe>
+        </div>
+        
+        <div class="chat-footer">
+            <p><i class="fas fa-info-circle"></i> This is my AI career assistant powered by Gemini AI. Feel free to ask about my projects, skills, or potential collaborations!</p>
+        </div>
+    </div>
+
+    <script>
+        // Simple script for iframe loading
+        window.addEventListener('load', function() {
+            const iframe = document.querySelector('iframe');
+            if (iframe) {
+                iframe.addEventListener('load', function() {
+                    console.log('Chat iframe loaded successfully');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

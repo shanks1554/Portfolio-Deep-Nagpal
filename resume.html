@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Resume - Deep Nagpal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .resume-container {
+            max-width: 800px;
+            margin: 120px auto 40px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .resume-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .resume-header h1 {
+            margin: 0 0 1rem 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .resume-header p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .resume-content {
+            padding: 3rem 2rem;
+        }
+        
+        .resume-preview {
+            background: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .resume-preview i {
+            font-size: 4rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+        
+        .resume-preview h3 {
+            color: #334155;
+            margin-bottom: 0.5rem;
+        }
+        
+        .resume-preview p {
+            color: #64748b;
+            margin: 0;
+        }
+        
+        .download-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .download-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .download-card:hover {
+            border-color: #2563eb;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+        }
+        
+        .download-card i {
+            font-size: 2.5rem;
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+        
+        .download-card h3 {
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+        
+        .download-card p {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        
+        .resume-info {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .resume-info h3 {
+            color: #1f2937;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .resume-info ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .resume-info li {
+            color: #4b5563;
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .resume-info li::before {
+            content: '•';
+            color: #2563eb;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: #1f2937;
+            text-decoration: none;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .back-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .resume-container {
+                margin: 100px 20px 40px;
+            }
+            
+            .resume-header {
+                padding: 2rem 1.5rem;
+            }
+            
+            .resume-header h1 {
+                font-size: 2rem;
+            }
+            
+            .resume-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .download-options {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+    
+    <div class="resume-container">
+        <div class="resume-header">
+            <h1><i class="fas fa-file-alt"></i> Download Resume</h1>
+            <p>Get my detailed resume in your preferred format</p>
+        </div>
+        
+        <div class="resume-content">
+            <div class="resume-preview">
+                <i class="fas fa-file-pdf"></i>
+                <h3>Deep Nagpal - AI/ML Engineer</h3>
+                <p>Computer Science Graduate | AI/ML Specialist | Full-Stack Developer</p>
+            </div>
+            
+            <div class="download-options">
+                <div class="download-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>PDF Format</h3>
+                    <p>High-quality PDF version perfect for printing and sharing</p>
+                    <a href="Resume.pdf" download class="download-btn">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+                
+                <div class="download-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>View Online</h3>
+                    <p>Open the resume in a new tab to view or print</p>
+                    <a href="Resume.pdf" target="_blank" class="download-btn">
+                        <i class="fas fa-external-link-alt"></i> View Resume
+                    </a>
+                </div>
+            </div>
+            
+            <div class="resume-info">
+                <h3><i class="fas fa-info-circle"></i> What's Included</h3>
+                <ul>
+                    <li>Professional experience and internships</li>
+                    <li>Technical skills and technologies</li>
+                    <li>Academic background and achievements</li>
+                    <li>Project portfolio and GitHub links</li>
+                    <li>Contact information and social profiles</li>
+                    <li>Certifications and training</li>
+                </ul>
+            </div>
+            
+            <div class="resume-info">
+                <h3><i class="fas fa-lightbulb"></i> Quick Tips</h3>
+                <ul>
+                    <li>Save the PDF to your device for offline access</li>
+                    <li>Use the PDF version for formal applications</li>
+                    <li>Feel free to reach out if you need additional information</li>
+                    <li>Check out my projects section for more details about my work</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add download tracking
+        document.addEventListener('DOMContentLoaded', function() {
+            const downloadLinks = document.querySelectorAll('a[download]');
+            downloadLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    console.log('Resume download initiated');
+                    // You can add analytics tracking here if needed
+                });
+            });
+        });
+    </script>
+</body>
+</html>
